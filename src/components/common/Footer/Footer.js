@@ -18,9 +18,9 @@ const Footer = () => {
     >
       <div>arjunrao777@arjunlearn.co</div>
       <div style={{ marginTop: '0.5rem' }}>
-        <a href="#" style={{ margin: '0 0.5rem', color: theme.colors.text }}>{t('aboutUs')}</a>|
-        <a href="#" style={{ margin: '0 0.5rem', color: theme.colors.text }}>{t('contactUs')}</a>|
-        <a href="#" style={{ margin: '0 0.5rem', color: theme.colors.text }}>{t('cookieSettings')}</a>
+        <a href="/about" style={{ margin: '0 0.5rem', color: theme.colors.text }}>{t('aboutUs')}</a>|
+        <a href="/contact" style={{ margin: '0 0.5rem', color: theme.colors.text }}>{t('contactUs')}</a>|
+        <a href="/cookie-setting" style={{ margin: '0 0.5rem', color: theme.colors.text }}>{t('cookieSettings')}</a>
       </div>
     </footer>
   );
