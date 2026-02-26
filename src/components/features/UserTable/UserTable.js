@@ -75,8 +75,17 @@ const UserTable = () => {
       {usersStatus === 'failed' && <p style={{ color: 'red' }}>Failed to load users.</p>}
       {usersStatus === 'succeeded' && (
       <>
-      <div style={{ marginBottom: '0.5rem' }}>
-        <label style={{ color: theme.colors.text }}>
+      <div
+        style={{
+          marginBottom: '0.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '1rem',
+          flexWrap: 'wrap',
+        }}
+      >
+        <label style={{ color: theme.colors.text, whiteSpace: 'nowrap' }}>
           Filter:&nbsp;
           <input
             type="text"
@@ -88,12 +97,11 @@ const UserTable = () => {
               backgroundColor: theme.isDark ? '#333' : '#fff',
               color: theme.colors.text,
               border: `1px solid ${theme.colors.tableBorder}`,
+              maxWidth: '100%',
             }}
           />
         </label>
-      </div>
-      <div style={{ marginBottom: '0.5rem' }}>
-        <label style={{ color: theme.colors.text }}>
+        <label style={{ color: theme.colors.text, whiteSpace: 'nowrap' }}>
           Page size:&nbsp;
           <select
             value={pageSize}

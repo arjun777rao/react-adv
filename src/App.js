@@ -4,6 +4,7 @@ import Header from './components/common/Header/Header';
 import Footer from './components/common/Footer/Footer';
 import UserTable from './components/features/UserTable/UserTable';
 import { ThemeProvider, useTheme } from './utils/theme';
+import { I18nProvider } from './utils/i18n';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -28,9 +29,11 @@ function AppContent() {
 
 function App() {
   return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
+    <I18nProvider>
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
+    </I18nProvider>
   );
 }
 

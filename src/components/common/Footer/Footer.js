@@ -1,8 +1,10 @@
 import React from 'react';
 import { useTheme } from '../../../utils/theme';
+import { useI18n } from '../../../utils/i18n';
 
 const Footer = () => {
   const { theme } = useTheme();
+  const { t } = useI18n();
 
   return (
     <footer
@@ -16,9 +18,9 @@ const Footer = () => {
     >
       <div>arjunrao777@arjunlearn.co</div>
       <div style={{ marginTop: '0.5rem' }}>
-        <a href="#" style={{ margin: '0 0.5rem', color: theme.colors.text }}>About us</a>|
-        <a href="#" style={{ margin: '0 0.5rem', color: theme.colors.text }}>Contact us</a>|
-        <a href="#" style={{ margin: '0 0.5rem', color: theme.colors.text }}>Cookie settings</a>
+        <a href="#" style={{ margin: '0 0.5rem', color: theme.colors.text }}>{t('aboutUs')}</a>|
+        <a href="#" style={{ margin: '0 0.5rem', color: theme.colors.text }}>{t('contactUs')}</a>|
+        <a href="#" style={{ margin: '0 0.5rem', color: theme.colors.text }}>{t('cookieSettings')}</a>
       </div>
     </footer>
   );
